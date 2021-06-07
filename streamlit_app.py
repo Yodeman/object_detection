@@ -9,6 +9,8 @@ import torchvision
 
 def main():
     readme_text = st.markdown(open("README.md", 'r').read())
+    res = Image.open("result.jpg")
+    st.image(res, caption="Result of training.")
 
     st.sidebar.title("What to do")
     app_mode = st.sidebar.selectbox(
