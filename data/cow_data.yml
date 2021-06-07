@@ -1,0 +1,12 @@
+train:
+  /content/drive/My Drive/cow_detection_new/images/train
+val:
+  /content/drive/My Drive/cow_detection_new/images/val
+test:
+  /content/drive/My Drive/cow_detection_new/images/test
+
+nc:
+  1
+
+names:
+  ["animal"]
