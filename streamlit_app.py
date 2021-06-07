@@ -3,7 +3,7 @@ import streamlit as st
 import cv2
 
 def main():
-    readme_text = st.markdown(open("README1.md", 'r').read())
+    readme_text = st.markdown(open("README.md", 'r').read())
 
     st.sidebar.title("What to do")
     app_mode = st.sidebar.selectbox(
