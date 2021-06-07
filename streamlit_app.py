@@ -34,7 +34,7 @@ def run_the_app():
     if uploaded_file:
         path = os.getcwd()
         img = Image.open(uploaded_file)
-        img.save(f"{path+'/tmp/test.jpg'}")
+        img.save(f"{path+'/tmp/'+uploaded_file.name}")
         img.close()
         command = f"python detect.py --source {path+'/tmp/test.jpg'} --weights best.pt --conf 0.2 --name output --img-size 600"
         subprocess.call(command, shell=True)
