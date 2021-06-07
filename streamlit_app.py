@@ -3,6 +3,7 @@ import streamlit as st
 import cv2
 import subprocess
 from PIL import Image
+import numpy
 
 def main():
     readme_text = st.markdown(open("README.md", 'r').read())
@@ -34,8 +35,8 @@ def run_the_app():
     if uploaded_file:
         path = os.getcwd()
         img = Image.open(uploaded_file)
-        img.save(f"{path+'/tmp/'+uploaded_file.name}")
-        img.close()
+        img_array = np.array(img)
+        cv2.imwrite(f"{path+'/tmp/'+uploaded_file.name}", img_array)
         command = f"python detect.py --source {path+'/tmp/test.jpg'} --weights best.pt --conf 0.2 --name output --img-size 600"
         subprocess.call(command, shell=True)
         img = Image.open(f"{path+'/output/test.jpg'}")
