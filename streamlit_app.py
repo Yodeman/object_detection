@@ -9,7 +9,7 @@ import torchvision
 
 def main():
     readme_text = st.markdown(open("README.md", 'r').read())
-    res = Image.open("results.jpg")
+    res = Image.open("results.png")
     st.image(res, caption="Result of training.")
 
     st.sidebar.title("What to do")
