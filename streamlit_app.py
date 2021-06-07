@@ -3,7 +3,7 @@ import streamlit as st
 import cv2
 import subprocess
 from PIL import Image
-import numpy
+import numpy as np
 
 def main():
     readme_text = st.markdown(open("README.md", 'r').read())
