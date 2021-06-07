@@ -3,3 +3,9 @@
 This project demonstrates object detection using YOLOv5. The model was trained on dataset that can be found [here](https://bird.nae-lab.org/cattle/) . 
 
 please select *Run the App* in the sidebar to start.
+
+
+
+# Result of training.
+
+![result](https://github.com/Yodeman/object_detection/blob/main/results.png)
