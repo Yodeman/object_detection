@@ -33,11 +33,11 @@ def run_the_app():
     uploaded_file = st.file_uploader("Upload an image file...", type=[".png", ".jpg"])
     if uploaded_file:
         img = Image.open(uploaded_file)
-        img.save("test.jpg")
+        img.save("object_detection/images/test.jpg")
         img.close()
-        command = "python detect.py --source test.jpg --weights best.pt --conf 0.2 --name output --img-size 600"
+        command = "python detect.py --source object_detection/images/test.jpg --weights best.pt --conf 0.2 --name output --img-size 600"
         subprocess.call(command, shell=True)
-        img = Image.open("/output/test.jpg")
+        img = Image.open("/object_detection/output/test.jpg")
         st.image(img, caption="prediction")    
 
 if __name__ == "__main__":
