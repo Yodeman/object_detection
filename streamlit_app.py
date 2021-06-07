@@ -35,7 +35,7 @@ def run_the_app():
         img = Image.open(uploaded_file)
         img.save("/images/test.jpg")
         img.close()
-        command = "python detect.py --source /images/test.jpg --weights runs/train/cow_det7/weights/best.pt --conf 0.2 --name output --img-size 600"
+        command = "python detect.py --source /images/test.jpg --weights best.pt --conf 0.2 --name output --img-size 600"
         subprocess.call(command, shell=True)
         img = Image.open("/output/test.jpg")
         st.image(img, caption="prediction")    
