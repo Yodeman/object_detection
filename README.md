@@ -6,6 +6,6 @@ please select *Run the App* in the sidebar to start.
 
 
 
-# Result of training.
+# Training Results.
 
 ![result](https://github.com/Yodeman/object_detection/blob/main/results.png)
